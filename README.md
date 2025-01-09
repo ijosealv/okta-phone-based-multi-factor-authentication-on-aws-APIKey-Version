@@ -31,7 +31,6 @@ The following table provides a sample cost breakdown for deploying this Guidance
 | AWS Service | Dimensions | Cost (USD) |
 | --- | --- | --- |
 | AWS Lambda | Usage: 1,000 messages<br>Breakdown: Approximately $0 | $0 |
-| AWS Lambda Authorizer | Usage: 1,000 messages<br>Breakdown: Approximately $0 | $0 |
 | Amazon API Gateway | Usage: 1,000 messages, Cache 0.5 <br>Breakdown: Approximately $15 | $15 |
 | Amazon DynamoDB | Usage: 1,000 messages<br>Breakdown: Approximately $12 | $12 |
 | AWS End User Messaging | Usage: 1,000 messages<br>Breakdown: Approximately $0 | $0 |
