@@ -71,7 +71,7 @@ To deploy the CloudFormation template from the AWS console, you can follow these
 4. **Specify Template**:
    - Choose "Upload a template file" option.
    - Click "Browse" and select the CloudFormation template file `CloudFormationDeploymentAPIKEYVersion.yml`
-   (**Folder location:** guidance-for-okta-phone-based-multi-factor-authentication-on-aws/deployment)
+   (**Folder location:** okta-phone-based-multi-factor-authentication-on-aws-APIKey-Version/deployment)
    - Click "Next".
 
 5. **Specify Stack Details**:
@@ -102,7 +102,7 @@ By following these steps, you have accomplished the deployment of your CloudForm
  
 ## Upload The Lambda API Trigger Function Code
 
-Navigate to the `guidance-for-okta-phone-based-multi-factor-authentication-on-aws/deployment/Lambda-API-Trigger` directory. It is crucial to note that the `index.js` file within the `Lambda-API-Trigger` folder is coded to operate in the `us-east-1` AWS region. Should you intend to deploy your function in a different AWS region, you must modify the region configuration within the code. Specifically, you'll need to alter the variable `aws_region` found on line #5 of the `index.js` file to reflect your target region.
+Navigate to the `okta-phone-based-multi-factor-authentication-on-aws-APIKey-Version/deployment/Lambda-API-Trigger` directory. It is crucial to note that the `index.js` file within the `Lambda-API-Trigger` folder is coded to operate in the `us-east-1` AWS region. Should you intend to deploy your function in a different AWS region, you must modify the region configuration within the code. Specifically, you'll need to alter the variable `aws_region` found on line #5 of the `index.js` file to reflect your target region.
 
 The file `originationIdentities.json` maps two-letter country codes to origination identities (phone numbers, Sender IDs, short codes, ARNs, etc.) associated with the AWS End User Messaging Service. These origination identities must be registered with your AWS Account and listed within the AWS End User Messaging Service Dashboard. The keys represent the two-letter country codes, while the values correspond to the registered origination identities. The origination identity can be a PhoneNumber, PhoneNumberId, PhoneNumberArn, SenderId, SenderIdArn, PoolId, or PoolArn. To add support for a new country, determine the two-letter country code, add a new entry with the country code as the key, and set the value to the appropriate registered origination identity.
 
@@ -122,15 +122,15 @@ Inside the `originationIdentities.json` you will find examples, please edit this
 
 3. In the list, **choose the Lambda API Trigger Function** created by CloudFormation.
 
-4. Open a Mac/Linux terminal and navigate to the `guidance-for-okta-phone-based-multi-factor-authentication-on-aws/deployment/Lambda-API-Trigger` directory. 
+4. Open a Mac/Linux terminal and navigate to the `okta-phone-based-multi-factor-authentication-on-aws-APIKey-Version/deployment/Lambda-API-Trigger` directory. 
 
-   Example: `cd /Users/UserName/Desktop/guidance-for-okta-phone-based-multi-factor-authentication-on-aws/deployment/Lambda-API-Trigger`
+   Example: `cd /Users/UserName/Desktop/okta-phone-based-multi-factor-authentication-on-aws-APIKey-Version/deployment/Lambda-API-Trigger`
 
 5. Run the following terminal command to download the latest libphonenumber-js Module.
 
    Run command: `npm install libphonenumber-js` (node must be installed to run)
 
-6. Zip up `node_modules`, `originationIdentities.json`, `index.js`, `package.json` and `package-lock.json` together located in `guidance-for-okta-phone-based-multi-factor-authentication-on-aws/deployment/Lambda-API-Trigger` folder. Use the following Zip command on Mac/Linux.
+6. Zip up `node_modules`, `originationIdentities.json`, `index.js`, `package.json` and `package-lock.json` together located in `okta-phone-based-multi-factor-authentication-on-aws-APIKey-Version/deployment/Lambda-API-Trigger` folder. Use the following Zip command on Mac/Linux.
 
    Run command: `zip -r LambdaAPITrigger.zip *`
 
