@@ -22,7 +22,7 @@
 This Guidance demonstrates how to implement a secure and scalable one-time passcode (OTP) delivery solution by using AWS with Okta’s identity platform. The Guidance supports multiple languages and communication methods and stores language-specific message templates in a dynamic, scalable database. This enables you to tailor OTP messages based on users’ preferred languages and delivery channels, such as SMS or voice calls. By using this Guidance, you can implement a reliable, flexible, and secure OTP delivery method that helps you accommodate a diverse user base. Additionally, the solution supports phone numbers from multiple countries through the AWS End User Messaging service, which provides coverage for over 240 countries. By leveraging this service, the OTP delivery system can seamlessly handle phone numbers from various countries, ensuring a consistent and reliable experience for users worldwide. 
 
 <p align="center">
-  <img src="assets/images/Architecture.jpg" alt="Architecture Diagram" width="800" height="auto"/>
+  <img src="assets/images/Architecture2.jpg" alt="Architecture Diagram" width="800" height="auto"/>
 </p>
 
 ### Cost
